@@ -8,12 +8,6 @@ import(
 
 func main(){
 
-  client := redis.NewClient(&redis.Options{
-		Addr:     "localhost:6379",
-		Password: "",
-		DB:       0,
-	})
-
 	c, err := redis.Dial("tcp", "localhost:6379")
 	if err != nil {
 		fmt.Println("connect to redis err", err.Error())
